@@ -33,7 +33,7 @@
       (ul
        (li ,(a "astynax@github" "https://github.com/astynax"))
        (li ,(a "Recursive.One" "https://recursive.one")
-           " (personal site, kind of)")
+           " (personal site, kind of). Also available from Gemini")
        (li ,(a "astynax.me" "https://astynax.me")
            " (personal site, another one)")))))
 
