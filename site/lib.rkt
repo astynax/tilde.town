@@ -1,7 +1,12 @@
 #lang racket
 (require sxml)
 
-(provide page build)
+(provide ->html page a super)
+
+(define (->html tree)
+  (string-append
+   "<!DOCTYPE html>\n"
+   (srl:sxml->html-noindent tree)))
 
 (define (page heads . tails)
   `(html
@@ -11,7 +16,8 @@
     (body
      ,@tails)))
 
-(define (build tree)
-  (string-append
-   "<!DOCTYPE html>\n"
-   (srl:sxml->html tree)))
+(define (a title url)
+  `(a (@ (href ,url)) ,title))
+
+(define (super . content)
+  `(span (@ (class "super")) ,@content))

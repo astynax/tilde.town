@@ -13,3 +13,8 @@ body {
 .logo .eye {
   color: aqua;
 }
+
+.super {
+  vertical-align: super;
+  font-size: 75%;
+}

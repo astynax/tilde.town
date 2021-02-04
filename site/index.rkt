@@ -23,22 +23,30 @@
     (p "I'm " (strong "~astynax") " and this is my tilde page.")
     ,logo
     (p
-     "I like programming and programming languages. My favourite PLs are "
-     "Haskell, Elm, Racket, Clojure, Rust, Emacs Lisp. Also I like reading, "
-     "cycling and DIY electronics.")))
+     "I like programming and programming languages. My favourite PLs:"
+     (ul
+      (li "Haskell")
+      (li "Elm")
+      (li "Racket")
+      (li "Clojure")
+      (li "Rust")
+      (li "Emacs Lisp"))
+     "Also I like reading, cycling and DIY electronics.")))
 
 (define links
-  (let [(a (lambda (title url) `(a (@ (href ,url)) ,title)))]
-    `(section
-      (ul
-       (li ,(a "astynax@github" "https://github.com/astynax"))
-       (li ,(a "Recursive.One" "https://recursive.one")
-           " (personal site, kind of). Also available from Gemini")
-       (li ,(a "astynax.me" "https://astynax.me")
-           " (personal site, another one)")))))
+  `(section
+    (ul
+     (li ,(a "astynax@github" "https://github.com/astynax"))
+     (li ,(a "Recursive.One" "https://recursive.one")
+         " (personal site, kind of). Also has a Gemini"
+         ,(super (a "?" "https://gemini.circumlunar.space/"))
+         " "
+         ,(a "capsule" "gemini://recursive.one"))
+     (li ,(a "astynax.me" "https://astynax.me")
+         " (personal site, another one)"))))
 
 (display
- (build
+ (->html
   (page
    `((title "~astynax") ,css)
    '(h1 "Welcome!")
