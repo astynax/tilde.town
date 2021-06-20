@@ -18,3 +18,15 @@ body {
   vertical-align: super;
   font-size: 75%;
 }
+
+.raindrop-near {
+  color: aqua;
+}
+
+.raindrop-far {
+  color: teal;
+}
+
+.raindrop-very-far {
+  color: purple;
+}

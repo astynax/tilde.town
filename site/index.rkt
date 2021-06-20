@@ -6,6 +6,20 @@
             (type "text/css")
             (href "styles.css"))))
 
+(define rain-js
+  '(script (@ (src "rain.min.js"))
+           ""))
+
+(define rain-script
+  '(script (@ (type "text/javascript")) "
+const app = Elm.Main.init({
+  node: document.getElementById('rain-bar'),
+  flags: {
+    width: 64,
+    height: 8
+  }
+});"))
+
 (define logo
   (let* [(span (lambda (cls)
                  (lambda (x) `(span (@ (class ,cls)) ,x))))
@@ -48,7 +62,10 @@
 (display
  (->html
   (page
-   `((title "~astynax") ,css)
+   `((title "~astynax") ,css ,rain-js)
    '(h1 "Welcome!")
+   '(div (@ (id "rain-bar")) "")
    about
-   links)))
+   links
+   rain-script
+   )))
