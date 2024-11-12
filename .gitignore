@@ -9,6 +9,8 @@
 !/scripts
 
 !.choochoo
+!README
+!Makefile
 
 !/site
 /site/compiled
