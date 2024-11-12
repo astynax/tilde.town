@@ -3,6 +3,7 @@
 !.gitignore
 
 !/public_html
+/public_html/blog
 /public_html/**/*.html
 
 !/scripts

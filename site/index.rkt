@@ -50,6 +50,7 @@ const app = Elm.Main.init({
 (define links
   `(section
     (ul
+     (li ,(a "~astynax/blog" "./blog") ", a blog (kinda) I made using the Tilda's TTBS engine")
      (li ,(a "astynax@github" "https://github.com/astynax"))
      (li ,(a "Recursive.One" "https://recursive.one")
          " (personal site, kind of). Also has a Gemini"
