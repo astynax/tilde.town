@@ -2,17 +2,16 @@
 
 !.gitignore
 
-!/public_html
-/public_html/blog
-/public_html/**/*.html
-
 !/scripts
 
 !.choochoo
 !README
 !Makefile
 
-!/site
-/site/compiled
+!/site/**/template.html
+!/site/**/*.p
+!/site/**/*.pm
+!/site/**/*.pmd
+/site/compiled/
 
 *~
